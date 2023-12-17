@@ -208,6 +208,7 @@ class CreateTaskPage extends StatelessWidget {
               ),
             ),
             child: ListTile(
+              leading: const Icon(Icons.calendar_today),
               title: Container(
                 padding: const EdgeInsets.all(8),
                 child: const Text(
@@ -273,6 +274,10 @@ class TaskDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+         leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
         title: const Text('Task Detail'),
       ),
       body: Column(
@@ -372,6 +377,7 @@ class TaskDetailPage extends StatelessWidget {
               ),
             ),
             child: ListTile(
+               leading: const Icon(Icons.calendar_today),
               title: Container(
                 padding: const EdgeInsets.all(8),
                 child: const Text(
